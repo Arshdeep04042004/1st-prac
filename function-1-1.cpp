@@ -1,24 +1,20 @@
 #include <iostream>
+//1-1
 
-//printer() function
-using namespace std;
+extern void print_matrix(int array[10][10]);
 
-void printer(int arr[10][10])
-{
-	//printing array
-  for(int i=0;i<10;i++)
-  {
-  	for(int j=0;j<10;j++)
-  	{
-      if (j==9){
-       cout<<arr[i][j]<<"";
-      } else {
+int main(){
+    int array[10][10];
+    for(int i=0; i<10; i++){
+        for(int j=0; j<10; j++){
+
+          array[i][j] = 0;
+        }
         
-     cout << array[i][j]<<" ";
-      }
-  	}
+    }
 
-  	cout<<endl;
-  }
+    print_matrix(array);
+
+   return 0;
 
 }
